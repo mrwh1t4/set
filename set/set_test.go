@@ -49,3 +49,14 @@ func TestNewConcurrencySet(t *testing.T) {
 		})
 	}
 }
+
+func Benchmark_NewConcurrencySet(b *testing.B) {
+	s := NewConcurrencySet[int]()
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			s.Insert(1)
+			s.Delete(1)
+			s.Exist(1)
+		}
+	})
+}
