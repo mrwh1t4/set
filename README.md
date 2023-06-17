@@ -1,3 +1,3 @@
 A package implements generic set.
 
-ConcurrencySet is thread-safe
+ConcurrencySet is thread-safe.
