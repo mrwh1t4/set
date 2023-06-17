@@ -1,2 +1,3 @@
-# set
-golang generic set
+A package implements generic set.
+
+ConcurrencySet is thread-safe
